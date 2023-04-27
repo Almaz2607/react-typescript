@@ -1,2 +1,3 @@
 # react-typescript
-React TypeScript full course 
+
+React TypeScript full course
