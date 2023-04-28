@@ -6,6 +6,7 @@ import { ITodo, IUser } from "./types/types";
 import axios from "axios";
 import List from "./components/list";
 import TodoItem from "./components/todoItem";
+import EventsExample from "./components/eventsExample";
 
 function App() {
   const [users, setUsers] = useState<IUser[]>([]);
@@ -40,6 +41,7 @@ function App() {
 
   return (
     <div>
+      <EventsExample />
       <Card
         onClick={(num) => console.log("click", num)}
         width="100px"
