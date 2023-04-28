@@ -1,10 +1,15 @@
 import React from "react";
-import Card from "./components/card";
+import Card, { CardVariant } from "./components/card";
 
 function App() {
   return (
     <div>
-      <Card width="100px" height="100px">
+      <Card
+        onClick={(num) => console.log("click", num)}
+        width="100px"
+        height="100px"
+        variant={CardVariant.primary}
+      >
         <button>Click</button>
       </Card>
     </div>
