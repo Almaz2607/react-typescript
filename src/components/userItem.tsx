@@ -1,20 +1,20 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { IUser } from "../types/types";
 
 interface UserItemProps {
   user: IUser;
+  onClick: (user: IUser) => void;
 }
 
-const UserItem: FC<UserItemProps> = ({ user }) => {
+const UserItem: FC<UserItemProps> = ({ user, onClick }) => {
   return (
-    <>
-      <div
-        style={{ padding: 15, border: "1px solid lightgreen", marginTop: 10 }}
-      >
-        {user.id}. {user.name} проживает в городе {user.address.city} на улице{" "}
-        {user.address.street}
-      </div>
-    </>
+    <div
+      onClick={() => onClick(user)}
+      style={{ padding: 15, border: "1px solid lightgreen", marginTop: 10 }}
+    >
+      {user.id}. {user.name} проживает в городе {user.address.city} на улице{" "}
+      {user.address.street}
+    </div>
   );
 };
 
